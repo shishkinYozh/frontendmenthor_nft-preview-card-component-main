@@ -65,8 +65,10 @@ body {
     font-weight: 300;
 }
 hr {
-    border-color: var(--color_very-dark-blue_line);
+    background-color: var(--color_very-dark-blue_line);
     margin: 1rem 0;
+    height: 0.1rem;
+    border-style: none;
 }
 .author {
     display: flex;
