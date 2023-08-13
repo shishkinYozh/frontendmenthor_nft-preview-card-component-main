@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root {
+    --color_soft-blue: hsl(215, 51%, 70%);
+    --color_cyan: hsl(178, 100%, 50%);
+    --color_semitransparent-cyan: hsl(178, 100%, 50%, 0.6);
+
+    --color_very-dark-blue_mainBG: hsl(217, 54%, 11%);
+    --color_very-dark-blue_cardBG: hsl(216, 50%, 16%);
+    --color_very-dark-blue_line: hsl(215, 32%, 27%);
+
+    --color_white: hsl(0, 0%, 100%);
+}
+
+* {
+    font-family: 'Outfit', sans-serif;
+    font-size: 18px;
+}
+
+body {
+    background-color: var(--color_very-dark-blue_mainBG);
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+}
+.main {
+    background-color: var(--color_very-dark-blue_cardBG);
+    width: 300px;
+    padding: 23px;
+    border-radius: 20px;
+}
+.picture {
+    width: 100%;
+    border-radius: 10px;
+}
+.header_link {
+    color: var(--color_white);
+    font-size: 1.15rem;
+    font-weight: 400;
+    text-decoration: none;
+}
+.description {
+    color: var(--color_soft-blue);
+    font-weight: 300;
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+}
+.info {
+    display: flex;
+    justify-content:space-between
+}
+.info__eth,
+.info__days_left {
+    display: flex;
+    gap: 0.3rem;
+    align-items: center;
+    font-size: 0.9rem;
+}
+.info__eth {
+    color: var(--color_cyan);
+    font-weight: 500;
+}
+.info__days_left {
+    color: var(--color_soft-blue);
+    font-weight: 300;
+}
+hr {
+    border-color: var(--color_very-dark-blue_line);
+    margin: 1rem 0;
+}
+.author {
+    display: flex;
+    align-items: center;
+    justify-content:flex-start;
+    color: var(--color_soft-blue);
+    font-size: 0.9rem;
+    font-weight: 300;
+}
+.avatar {
+    border-radius: 50%;
+    border: 1px solid var(--color_white);
+    width: 35px;
+    margin-right: 1rem;
+}
+.author_link {
+    color: var(--color_white);
+    font-size: 0.9rem;
+    font-weight: 300;
+    text-decoration: none;
+    margin-left: 0.2rem;
+}
+
+.picture_block {
+    position: relative;
+    font-size: 0;
+}
+.header {
+    margin-top: 1.2rem;
+}
+.onhover_view {
+    background-color: var(--color_semitransparent-cyan);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:0;
+    display: grid;
+    place-content: center;
+    border-radius: 10px;
+    cursor: pointer;
+    opacity: 0;
+}
+
+
+@media (min-width: 600px) {
+    .onhover_view:hover {
+        opacity: 1;
+    }
+    .header_link:hover,
+    .author_link:hover {
+        color: var(--color_cyan);
+    }
+}
